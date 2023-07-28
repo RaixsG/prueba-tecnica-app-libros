@@ -1,0 +1,30 @@
+.container {
+  min-width: 350px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(
+    4,
+    1fr
+  );
+  gap: 20px;
+};
+
+.reading-container {
+  margin-top: 20px;
+  background-color: #3e3c3c;
+  padding: 20px;
+  border-radius: 15px;
+};
+
+.book-button {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+};
+
+.book_cover {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+};
