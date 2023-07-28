@@ -1,0 +1,1 @@
+export { bookShape } from "./global/Book";

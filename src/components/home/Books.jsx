@@ -1,5 +1,6 @@
+import PropTypes from 'prop-types'
 import { library } from '../../assets/books.json'
-import './books.css'
+import { styled } from 'styled-components';
 
 export const Books = ({ setSelectedBookData }) => {
 
@@ -10,11 +11,11 @@ export const Books = ({ setSelectedBookData }) => {
     };
 
     return (
-        <div>
+        <BooksContainer>
             <h1>
                 { `${library.length} libros disponibles` }
             </h1>
-            <div className='container'>
+            <div>
                 { library.map((book) => (
                     <button
                         key={ book.book.ISBN }
@@ -29,6 +30,19 @@ export const Books = ({ setSelectedBookData }) => {
                     </button>
                 ))}
             </div>
-        </div>
+        </BooksContainer>
     )
-}
+};
+Books.propTypes = {
+    'setSelectedBookData': PropTypes.func,
+};
+
+const BooksContainer = styled.section`
+    div {
+        min-width: 350px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    };
+`

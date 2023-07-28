@@ -1,7 +1,3 @@
 import { HomeScreen } from './screens';
 
-export default function App() {
-  return (
-    <HomeScreen />
-  )
-};
+export const App = () => <HomeScreen />
